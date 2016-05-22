@@ -1,4 +1,4 @@
-# Makes use of a slightly better updated version of Vim
+# Makes use of a slightly more updated version of Vim
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # Setting PATH for Python 3.5

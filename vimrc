@@ -1,4 +1,4 @@
-" :::: Hans Heums .vimrc ::::
+" :::: Hans Heums vimrc ::::
 " inspirasjonskilde: https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 
 " VUNDLE
@@ -46,9 +46,9 @@ else
 endif
 
 " Powerline! (Funker kun når flere vinduer er åpne? Sjekk http://powerline.readthedocs.io/en/latest/)
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Ikke helt overbevist om at denne er til nytte for meg helt enda. Bør se over
-"konfigurasjonsmulighetene først.
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Løsning på ovennevnte problem; se også :help laststatus
+set laststatus=2
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -89,9 +89,14 @@ au BufNewFile,BufRead *.py
 noremap > ~
 noremap & ^
 " noremap å [ 
-" noremap ¨ ]
+" noremap ¨ ] <-
 " noremap Å {
 " noremap ^ } <- Fikk ikke disse til å funke.
+
+" Enter for å sette inn ny linje under uten å gå inn i insert mode
+" Ctrl-o for å sette inn linjen over
+nmap <C-o> O<Esc>
+nmap <CR> o<Esc>
 
 " Hadde denne på før, men tror ikke jeg trenger den lenger:
 " filetype indent plugin on
