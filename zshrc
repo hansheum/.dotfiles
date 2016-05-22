@@ -29,7 +29,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Sjekk ut de følgende: plugins=(git mercurial autojump command-not-found python pip github gnu-utils history-substring-search)
-plugins=vi-mode
+plugins=(vi-mode zsh-syntax-highlighting) #NB: zsh-syntax-highlighting må være sist!
+
+# zsh-syntax-highlighting er ikke i oh-my-zsh fra før. Legge til installasjonsskript i makesymlinks.sh?
 
 source $ZSH/oh-my-zsh.sh
 

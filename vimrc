@@ -30,6 +30,9 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " syntastic: Makes Vim check your syntax on each save
 Plugin 'scrooloose/syntastic'
 
+" Makes sure syntastic uses Python 3 syntax checking
+let g:syntastic_python_python_exec = '/usr/local/bin/python3.5'
+
 " vim-flake8: Makes Vim check your PEP8 on each save
 Plugin 'nvie/vim-flake8'
 
@@ -82,10 +85,12 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " Define BadWhitespace before using in a match
-highlight BadWhitespace ctermbg=red guibg=darkred
+" highlight BadWhitespace ctermbg=red guibg=darkred
 
 " Flag redundant whitespace as 'bad'
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" ^Var egentlig bare irriterende. Kan kanskje være nyttig, men da må fargen
+" endres.
 
 " Useful keyboard maps for norwegian keyboards
 noremap > ~
