@@ -35,3 +35,5 @@ source $ZSH/oh-my-zsh.sh
 #I don't like this feature. I think no one does. It corrects you, when you are trying to create new files, for example.
 unsetopt correctall 
 
+# Sets the default user, which then makes the zsh-profile I'm using (agnoster) hide the name whenever I'm logged in.
+export $DEFAULT_USER="my_username"
