@@ -36,4 +36,4 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correctall 
 
 # Sets the default user, which then makes the zsh-profile I'm using (agnoster) hide the name whenever I'm logged in.
-export $DEFAULT_USER="Hans"
+export DEFAULT_USER="Hans"
