@@ -73,25 +73,23 @@ set scrolloff=5
 
 " Proper Python PEP8 indentation
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
     \ set fileformat=unix
 
+" Define BadWhitespace before using in a match
+highlight BadWhitespace ctermbg=red guibg=darkred
+
 " Flag redundant whitespace as 'bad'
-" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-" (funker ikke, gidder ikke fikse akkurat nå)
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Useful keyboard maps for norwegian keyboards
 noremap > ~
 noremap & ^
-" noremap å [ 
-" noremap ¨ ] <-
-" noremap Å {
-" noremap ^ } <- Fikk ikke disse til å funke.
 
 " Enter for å sette inn ny linje under uten å gå inn i insert mode
 " Ctrl-o for å sette inn linjen over
